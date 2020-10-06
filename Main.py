@@ -1,7 +1,7 @@
 import pygame
 from time import sleep
 from inputs import devices
-
+import os
 # 0 axis = aileron
 # 1 axis = elevator
 # 2 axis = throttle
@@ -9,6 +9,10 @@ from inputs import devices
 from Joystick import Joystick
 
 if __name__ == '__main__':
+    
+    
+    os.putenv('SDL_VIDEODRIVER', 'fbcon')
+    
     pygame.init()
     pygame.joystick.init()
     if pygame.joystick.get_count() != 1:
