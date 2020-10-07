@@ -13,7 +13,7 @@ from Joystick import Joystick
 
 if __name__ == '__main__':
     devices = [evdev.InputDevice(path) for path in evdev.list_devices()]
-    for device in devices:
-        print( device.name, device.path)
+    joystick = evdev.InputDevice(devices[0].path)
+    print (joystick)
 
 
