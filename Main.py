@@ -14,6 +14,6 @@ from Joystick import Joystick
 if __name__ == '__main__':
     devices = [evdev.InputDevice(path) for path in evdev.list_devices()]
     for device in devices:
-        print( device.name)
+        print( device.name, device.path)
 
 
